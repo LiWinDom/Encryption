@@ -37,6 +37,19 @@ namespace Encryptions
         {
             statusLabel.Text = "Ожидание...";
             statusProgressbar.Value = 0;
+
+            switch (encryptingTypeCombobox.SelectedIndex)
+            {
+                case 0:
+                    encryptingSettingsRoundsNum.Maximum = 1024;
+                    break;
+                case 1:
+                    encryptingSettingsRoundsNum.Maximum = 1024;
+                    break;
+                case 2:
+                    encryptingSettingsRoundsNum.Maximum = encryptingSettingsBlocksNum.Maximum;
+                    break;
+            }
         }
 
         private void changeThemeStripMenuItem_Click(object sender, EventArgs e)
@@ -103,12 +116,36 @@ namespace Encryptions
 
         private void encryptingSettingsBlocksNum_ValueChanged(object sender, EventArgs e)
         {
-
+            encryptingSettingsBlocksNum.Maximum = Math.Max(encryptingTextTexbox.TextLength / 2, 2);
+            switch (encryptingTypeCombobox.SelectedIndex)
+            {
+                case 0:
+                    encryptingSettingsRoundsNum.Maximum = 1024;
+                    break;
+                case 1:
+                    encryptingSettingsRoundsNum.Maximum = 1024;
+                    break;
+                case 2:
+                    encryptingSettingsRoundsNum.Maximum = encryptingSettingsBlocksNum.Maximum;
+                    break;
+            }
         }
 
         private void encryptingTextTexbox_TextChanged(object sender, EventArgs e)
         {
             encryptingSettingsBlocksNum.Maximum = Math.Max(encryptingTextTexbox.TextLength / 2, 2);
+            switch (encryptingTypeCombobox.SelectedIndex)
+            {
+                case 0:
+                    encryptingSettingsRoundsNum.Maximum = 1024;
+                    break;
+                case 1:
+                    encryptingSettingsRoundsNum.Maximum = 1024;
+                    break;
+                case 2:
+                    encryptingSettingsRoundsNum.Maximum = encryptingSettingsBlocksNum.Maximum;
+                    break;
+            }
         }
     }
 }

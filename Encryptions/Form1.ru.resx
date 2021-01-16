@@ -136,4 +136,7 @@
   <data name="encryptingTypeCombobox.Items1" xml:space="preserve">
     <value>Шифрование простой замены (пока не сделано)</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Encryption - v0.11</value>
+  </data>
 </root>

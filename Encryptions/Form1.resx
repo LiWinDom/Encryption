@@ -117,8 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="encryptingTypeCombobox.Items1" xml:space="preserve">
-    <value>Шифрование простой замены</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="encryptingKeyLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;encryptingSettingsBlocksLabel.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -136,13 +137,12 @@
   <data name="&gt;&gt;encryptingKeyTextbox.Name" xml:space="preserve">
     <value>encryptingKeyTextbox</value>
   </data>
-  <data name="encryptingButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 23</value>
+  <data name="&gt;&gt;statusProgressbar.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;encryptingKeyLabel.Name" xml:space="preserve">
     <value>encryptingKeyLabel</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="encryptingResultTextbox.MaxLength" type="System.Int32, mscorlib">
     <value>4095</value>
   </data>
@@ -193,9 +193,6 @@
   </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 236</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;encryptingTypeCombobox.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -278,17 +275,14 @@
   <data name="&gt;&gt;encryptingSettingsRoundsNum.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="encryptingTypeCombobox.Items2" xml:space="preserve">
+    <value>Сеть Фейстеля</value>
   </data>
   <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="&gt;&gt;encryptingKeyLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="encryptingKeyLabel.Text" xml:space="preserve">
     <value>Ключ шифрования:</value>
@@ -366,6 +360,9 @@
   <data name="&gt;&gt;encryptingSettingsBlocksNum.Name" xml:space="preserve">
     <value>encryptingSettingsBlocksNum</value>
   </data>
+  <data name="&gt;&gt;encryptingTextLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="&gt;&gt;encryptingResultLabel.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
@@ -386,9 +383,6 @@
   </data>
   <data name="encryptingSettingsRoundsNum.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
   </data>
   <data name="encryptingSettingsBlocksLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -414,11 +408,11 @@
   <data name="aboutProgramStripMenuItem.Text" xml:space="preserve">
     <value>О программе</value>
   </data>
+  <data name="&gt;&gt;encryptingKeyTextbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="encryptingButton.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
-  </data>
-  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="encryptingTypeCombobox.Text" xml:space="preserve">
     <value>Выберите способ шифрования</value>
@@ -432,9 +426,6 @@
   <data name="&gt;&gt;encryptingSettingsRoundsNum.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;encryptingResultLabel.Name" xml:space="preserve">
-    <value>encryptingResultLabel</value>
-  </data>
   <data name="&gt;&gt;changeThemeStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -444,6 +435,9 @@
   <data name="aboutProgramStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 20</value>
   </data>
+  <data name="statusLabel.Text" xml:space="preserve">
+    <value>Ожидание...</value>
+  </data>
   <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
     <value>menuStrip</value>
   </data>
@@ -452,6 +446,9 @@
   </data>
   <data name="encryptingSettingsRoundsNum.Location" type="System.Drawing.Point, System.Drawing">
     <value>154, 124</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="statusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 13</value>
@@ -464,6 +461,9 @@
   </data>
   <data name="&gt;&gt;settingsStripMenuItem.Name" xml:space="preserve">
     <value>settingsStripMenuItem</value>
+  </data>
+  <data name="encryptingTypeCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 21</value>
   </data>
   <data name="encryptingResultLabel.Text" xml:space="preserve">
     <value>Результат:</value>
@@ -519,11 +519,14 @@
   <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="encryptingTypeCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 21</value>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Расшифровать</value>
+  </data>
+  <data name="&gt;&gt;statusProgressbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;encryptingSettingsBlocksNum.Parent" xml:space="preserve">
     <value>tabPage1</value>
@@ -531,8 +534,8 @@
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Зашифровать</value>
   </data>
-  <data name="encryptingKeyLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="statusLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 266</value>
   </data>
   <data name="&gt;&gt;encryptingTestButton.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -540,8 +543,11 @@
   <data name="encryptingButton.Text" xml:space="preserve">
     <value>Зашифровать</value>
   </data>
-  <data name="statusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 266</value>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="&gt;&gt;statusLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="encryptingResultLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -570,17 +576,11 @@
   <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
     <value>tabControl</value>
   </data>
-  <data name="encryptingSettingsBlocksNum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
   <data name="&gt;&gt;encryptingTestButton.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="statusLabel.Text" xml:space="preserve">
-    <value>Ожидание...</value>
-  </data>
-  <data name="encryptingSettingsRoundsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 13</value>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="encryptingKeyLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 13</value>
@@ -618,14 +618,14 @@
   <data name="encryptingKeyTextbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 20</value>
   </data>
-  <data name="&gt;&gt;statusProgressbar.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="encryptingSettingsRoundsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
   </data>
   <data name="statusProgressbar.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 282</value>
   </data>
-  <data name="&gt;&gt;encryptingTextLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;encryptingResultLabel.Name" xml:space="preserve">
+    <value>encryptingResultLabel</value>
   </data>
   <data name="&gt;&gt;statusLabel.Name" xml:space="preserve">
     <value>statusLabel</value>
@@ -636,17 +636,17 @@
   <data name="&gt;&gt;aboutProgramStripMenuItem.Name" xml:space="preserve">
     <value>aboutProgramStripMenuItem</value>
   </data>
-  <data name="encryptingTypeCombobox.Items2" xml:space="preserve">
-    <value>Сеть Фейстеля</value>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;encryptingTypeCombobox.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="encryptingTypeCombobox.Items1" xml:space="preserve">
+    <value>Шифрование простой замены</value>
   </data>
-  <data name="&gt;&gt;encryptingKeyTextbox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="encryptingSettingsBlocksNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
   </data>
   <data name="encryptingSettingsBlocksNum.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -660,8 +660,8 @@
   <data name="encryptingTextLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;statusLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;statusProgressbar.Name" xml:space="preserve">
     <value>statusProgressbar</value>
@@ -669,8 +669,8 @@
   <data name="&gt;&gt;encryptingButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;statusProgressbar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="encryptingButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 23</value>
   </data>
   <data name="&gt;&gt;encryptingKeyLabel.Parent" xml:space="preserve">
     <value>tabPage1</value>
