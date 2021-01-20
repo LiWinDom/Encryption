@@ -109,7 +109,7 @@ namespace Encryptions
             // encryptingKeyTextbox
             // 
             this.encryptingKeyTextbox.Location = new System.Drawing.Point(115, 59);
-            this.encryptingKeyTextbox.MaxLength = 127;
+            this.encryptingKeyTextbox.MaxLength = 2048;
             this.encryptingKeyTextbox.Name = "encryptingKeyTextbox";
             this.encryptingKeyTextbox.Size = new System.Drawing.Size(190, 20);
             this.encryptingKeyTextbox.TabIndex = 12;
@@ -147,7 +147,7 @@ namespace Encryptions
             // encryptingResultTextbox
             // 
             this.encryptingResultTextbox.Location = new System.Drawing.Point(74, 184);
-            this.encryptingResultTextbox.MaxLength = 4095;
+            this.encryptingResultTextbox.MaxLength = 8192;
             this.encryptingResultTextbox.Name = "encryptingResultTextbox";
             this.encryptingResultTextbox.Size = new System.Drawing.Size(231, 20);
             this.encryptingResultTextbox.TabIndex = 8;
@@ -165,7 +165,7 @@ namespace Encryptions
             // 
             this.encryptingSettingsRoundsNum.Location = new System.Drawing.Point(154, 124);
             this.encryptingSettingsRoundsNum.Maximum = new decimal(new int[] {
-            1024,
+            1,
             0,
             0,
             0});
@@ -206,7 +206,7 @@ namespace Encryptions
             // 
             this.encryptingSettingsBlocksNum.Location = new System.Drawing.Point(149, 98);
             this.encryptingSettingsBlocksNum.Maximum = new decimal(new int[] {
-            512,
+            2,
             0,
             0,
             0});
@@ -238,6 +238,7 @@ namespace Encryptions
             // encryptingTextTextbox
             // 
             this.encryptingTextTextbox.Location = new System.Drawing.Point(95, 6);
+            this.encryptingTextTextbox.MaxLength = 8192;
             this.encryptingTextTextbox.Name = "encryptingTextTextbox";
             this.encryptingTextTextbox.Size = new System.Drawing.Size(210, 20);
             this.encryptingTextTextbox.TabIndex = 13;
@@ -283,7 +284,7 @@ namespace Encryptions
             // decryptingKeyTextbox
             // 
             this.decryptingKeyTextbox.Location = new System.Drawing.Point(115, 59);
-            this.decryptingKeyTextbox.MaxLength = 127;
+            this.decryptingKeyTextbox.MaxLength = 2048;
             this.decryptingKeyTextbox.Name = "decryptingKeyTextbox";
             this.decryptingKeyTextbox.Size = new System.Drawing.Size(190, 20);
             this.decryptingKeyTextbox.TabIndex = 25;
@@ -292,7 +293,7 @@ namespace Encryptions
             // decryptingResultTextbox
             // 
             this.decryptingResultTextbox.Location = new System.Drawing.Point(74, 184);
-            this.decryptingResultTextbox.MaxLength = 4095;
+            this.decryptingResultTextbox.MaxLength = 8192;
             this.decryptingResultTextbox.Name = "decryptingResultTextbox";
             this.decryptingResultTextbox.Size = new System.Drawing.Size(231, 20);
             this.decryptingResultTextbox.TabIndex = 21;
@@ -334,7 +335,7 @@ namespace Encryptions
             // decryptingTextTextbox
             // 
             this.decryptingTextTextbox.Location = new System.Drawing.Point(95, 6);
-            this.decryptingTextTextbox.MaxLength = 1023;
+            this.decryptingTextTextbox.MaxLength = 8192;
             this.decryptingTextTextbox.Name = "decryptingTextTextbox";
             this.decryptingTextTextbox.Size = new System.Drawing.Size(210, 20);
             this.decryptingTextTextbox.TabIndex = 14;
@@ -364,7 +365,7 @@ namespace Encryptions
             // 
             this.decryptingSettingsBlocksNum.Location = new System.Drawing.Point(149, 98);
             this.decryptingSettingsBlocksNum.Maximum = new decimal(new int[] {
-            512,
+            2,
             0,
             0,
             0});
@@ -407,7 +408,7 @@ namespace Encryptions
             // 
             this.decryptingSettingsRoundsNum.Location = new System.Drawing.Point(154, 124);
             this.decryptingSettingsRoundsNum.Maximum = new decimal(new int[] {
-            1024,
+            1,
             0,
             0,
             0});
@@ -490,7 +491,7 @@ namespace Encryptions
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "mainWindow";
-            this.Text = "Encryption - v0.2";
+            this.Text = "Encryption - v0.21";
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

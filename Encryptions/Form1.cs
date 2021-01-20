@@ -20,7 +20,7 @@ namespace Encryptions
 
         private void aboutProgramStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Encryption - программа для зашифровывания и расшифровывания сообщений. Версия программы: 0.2 build 3", "О программе", MessageBoxButtons.OK);
+            MessageBox.Show("Encryption - программа для зашифровывания и расшифровывания сообщений. Версия программы: 0.21 build 4", "О программе", MessageBoxButtons.OK);
         }
 
 
@@ -33,6 +33,9 @@ namespace Encryptions
 
             switch (encryptingTypeCombobox.SelectedIndex)
             {
+                case -1:
+                    encryptingSettingsRoundsNum.Maximum = 1;
+                    break;
                 case 0:
                     encryptingSettingsRoundsNum.Maximum = encryptingSettingsBlocksNum.Value;
                     break;
@@ -66,7 +69,6 @@ namespace Encryptions
 
         private void encryptingButton_Click(object sender, EventArgs e)
         {
-            statusLabel.Text = "Шифрование...";
             statusProgressbar.Value = 0;
             if (encryptingTypeCombobox.SelectedIndex == -1)
             {
@@ -90,9 +92,10 @@ namespace Encryptions
             }
             statusProgressbar.Maximum = Convert.ToInt32(encryptingSettingsRoundsNum.Value);
             string result = encryptingTextTextbox.Text;
-            for (int i = 0; i < Convert.ToInt32(encryptingSettingsRoundsNum.Value); ++i)
+            for (int i = 1; i <= Convert.ToInt32(encryptingSettingsRoundsNum.Value); ++i)
             {
-                statusLabel.Text = "Шифрование, раунд " + i + "/" + Convert.ToString(encryptingSettingsRoundsNum.Value);
+                statusLabel.Text = "Выполняется зашифровка, раунд " + Convert.ToString(i) + "/" + Convert.ToString(encryptingSettingsBlocksNum.Value);
+                Update();
                 switch (encryptingTypeCombobox.SelectedIndex)
                 {
                     case 0:
@@ -116,6 +119,9 @@ namespace Encryptions
 
             switch (decryptingTypeCombobox.SelectedIndex)
             {
+                case -1:
+                    encryptingSettingsRoundsNum.Maximum = 1;
+                    break;
                 case 0:
                     decryptingSettingsRoundsNum.Maximum = decryptingSettingsBlocksNum.Value;
                     break;
@@ -149,7 +155,6 @@ namespace Encryptions
 
         private void decryptingButton_Click(object sender, EventArgs e)
         {
-            statusLabel.Text = "Расшифрование...";
             statusProgressbar.Value = 0;
             if (decryptingTypeCombobox.SelectedIndex == -1)
             {
@@ -173,9 +178,10 @@ namespace Encryptions
             }
             statusProgressbar.Maximum = Convert.ToInt32(decryptingSettingsRoundsNum.Value);
             string result = decryptingTextTextbox.Text;
-            for (int i = 0; i < Convert.ToInt32(decryptingSettingsRoundsNum.Value); ++i)
+            for (int i = 1; i <= Convert.ToInt32(decryptingSettingsRoundsNum.Value); ++i)
             {
-                statusLabel.Text = "Расшифрование, раунд " + i + "/" + Convert.ToString(decryptingSettingsRoundsNum.Value);
+                statusLabel.Text = "Выполняется расшифровка, раунд " + Convert.ToString(i) + "/" + Convert.ToString(decryptingSettingsBlocksNum.Value);
+                Update();
                 switch (decryptingTypeCombobox.SelectedIndex)
                 {
                     case 0:
