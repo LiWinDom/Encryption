@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Functions;
+using Algorithm;
 
-namespace Encryptions
+namespace Encryption
 {
     public partial class mainWindow : Form
     {
@@ -20,7 +20,7 @@ namespace Encryptions
 
         private void aboutProgramStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Encryption - программа для зашифровывания и расшифровывания сообщений. Версия программы: 0.21 build 4", "О программе", MessageBoxButtons.OK);
+            MessageBox.Show("Encryption - программа для зашифровывания и расшифровывания сообщений. Версия программы: 0.3 build 5", "О программе", MessageBoxButtons.OK);
         }
 
 
@@ -99,7 +99,7 @@ namespace Encryptions
                 switch (encryptingTypeCombobox.SelectedIndex)
                 {
                     case 0:
-                        result = Functions.Encrypting.Feistel(result, encryptingKeyTextbox.Text, Convert.ToInt32(encryptingSettingsBlocksNum.Value));
+                        result = Feistel.Encrypting(result, encryptingKeyTextbox.Text, Convert.ToInt32(encryptingSettingsBlocksNum.Value));
                         break;
                 }
                 ++statusProgressbar.Value;
@@ -185,7 +185,7 @@ namespace Encryptions
                 switch (decryptingTypeCombobox.SelectedIndex)
                 {
                     case 0:
-                        result = Functions.Decrypting.Feistel(result, decryptingKeyTextbox.Text, Convert.ToInt32(decryptingSettingsBlocksNum.Value));
+                        result = Feistel.Decrypting(result, decryptingKeyTextbox.Text, Convert.ToInt32(decryptingSettingsBlocksNum.Value));
                         break;
                 }
                 ++statusProgressbar.Value;

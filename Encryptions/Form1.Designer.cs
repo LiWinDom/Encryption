@@ -1,5 +1,5 @@
 ﻿
-namespace Encryptions
+namespace Encryption
 {
     partial class mainWindow
     {
@@ -491,7 +491,7 @@ namespace Encryptions
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "mainWindow";
-            this.Text = "Encryption - v0.21";
+            this.Text = "Encryption - v0.3";
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
