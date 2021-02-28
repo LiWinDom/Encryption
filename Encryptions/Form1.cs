@@ -20,7 +20,7 @@ namespace Encryption
 
         private void aboutProgramStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Encryption - программа для зашифровывания и расшифровывания сообщений. Версия программы: 0.3 build 5", "О программе", MessageBoxButtons.OK);
+            MessageBox.Show("Encryption - программа для зашифровывания и расшифровывания сообщений. Версия программы: 0.4 build 6", "О программе", MessageBoxButtons.OK);
         }
 
 
@@ -29,7 +29,9 @@ namespace Encryption
         {
             statusLabel.Text = "Ожидание...";
             statusProgressbar.Value = 0;
+            encryptingSettingsBlocksNum.Enabled = true;
             encryptingSettingsBlocksNum.Maximum = Math.Max(encryptingTextTextbox.TextLength, 2);
+            encryptingSettingsRoundsNum.Enabled = true;
 
             switch (encryptingTypeCombobox.SelectedIndex)
             {
@@ -37,7 +39,19 @@ namespace Encryption
                     encryptingSettingsRoundsNum.Maximum = 1;
                     break;
                 case 0:
+                    encryptingSettingsRoundsNum.Maximum = 1;
+                    encryptingSettingsRoundsNum.Enabled = false;
+                    encryptingSettingsBlocksNum.Maximum = 1;
+                    encryptingSettingsBlocksNum.Enabled = false;
+                    break;
+                case 1:
                     encryptingSettingsRoundsNum.Maximum = encryptingSettingsBlocksNum.Value;
+                    break;
+                case 2:
+                    encryptingSettingsRoundsNum.Maximum = 1024;
+                    encryptingSettingsBlocksNum.Maximum = encryptingTextTextbox.TextLength / 16 + 1;
+                    encryptingSettingsBlocksNum.Value = encryptingTextTextbox.TextLength / 16 + 1;
+                    encryptingSettingsBlocksNum.Enabled = false;
                     break;
             }
         }
@@ -94,11 +108,14 @@ namespace Encryption
             string result = encryptingTextTextbox.Text;
             for (int i = 1; i <= Convert.ToInt32(encryptingSettingsRoundsNum.Value); ++i)
             {
-                statusLabel.Text = "Выполняется зашифровка, раунд " + Convert.ToString(i) + "/" + Convert.ToString(encryptingSettingsBlocksNum.Value);
+                statusLabel.Text = "Выполняется шифровка, раунд " + Convert.ToString(i) + "/" + Convert.ToString(encryptingSettingsBlocksNum.Value);
                 Update();
                 switch (encryptingTypeCombobox.SelectedIndex)
                 {
                     case 0:
+                        result = Main.Program.TextXOR(result, encryptingKeyTextbox.Text);
+                        break;
+                    case 1:
                         result = Feistel.Encrypting(result, encryptingKeyTextbox.Text, Convert.ToInt32(encryptingSettingsBlocksNum.Value));
                         break;
                 }
@@ -115,15 +132,29 @@ namespace Encryption
         {
             statusLabel.Text = "Ожидание...";
             statusProgressbar.Value = 0;
+            decryptingSettingsBlocksNum.Enabled = true;
             decryptingSettingsBlocksNum.Maximum = Math.Max(decryptingTextTextbox.TextLength, 2);
+            decryptingSettingsRoundsNum.Enabled = true;
 
             switch (decryptingTypeCombobox.SelectedIndex)
             {
                 case -1:
-                    encryptingSettingsRoundsNum.Maximum = 1;
+                    decryptingSettingsRoundsNum.Maximum = 1;
                     break;
                 case 0:
+                    decryptingSettingsRoundsNum.Maximum = 1;
+                    decryptingSettingsRoundsNum.Enabled = false;
+                    decryptingSettingsBlocksNum.Maximum = 1;
+                    decryptingSettingsBlocksNum.Enabled = false;
+                    break;
+                case 1:
                     decryptingSettingsRoundsNum.Maximum = decryptingSettingsBlocksNum.Value;
+                    break;
+                case 2:
+                    decryptingSettingsRoundsNum.Maximum = 1024;
+                    decryptingSettingsBlocksNum.Maximum = encryptingTextTextbox.TextLength / 16 + 1;
+                    decryptingSettingsBlocksNum.Value = encryptingTextTextbox.TextLength / 16 + 1;
+                    decryptingSettingsBlocksNum.Enabled = false;
                     break;
             }
         }
@@ -166,14 +197,9 @@ namespace Encryption
                 statusLabel.Text = "Введите текст для расшифрования";
                 return;
             }
-            if (decryptingTextTextbox.TextLength < 2)
-            {
-                statusLabel.Text = "Слишком короткий текст";
-                return;
-            }
             if (decryptingKeyTextbox.TextLength == 0)
             {
-                statusLabel.Text = "Введите ключ для шифрования";
+                statusLabel.Text = "Введите ключ для расшифрования";
                 return;
             }
             statusProgressbar.Maximum = Convert.ToInt32(decryptingSettingsRoundsNum.Value);
@@ -185,6 +211,9 @@ namespace Encryption
                 switch (decryptingTypeCombobox.SelectedIndex)
                 {
                     case 0:
+                        result = Main.Program.TextXOR(result, decryptingKeyTextbox.Text);
+                        break;
+                    case 1:
                         result = Feistel.Decrypting(result, decryptingKeyTextbox.Text, Convert.ToInt32(decryptingSettingsBlocksNum.Value));
                         break;
                 }

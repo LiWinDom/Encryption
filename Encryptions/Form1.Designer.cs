@@ -112,7 +112,7 @@ namespace Encryption
             this.encryptingKeyTextbox.MaxLength = 2048;
             this.encryptingKeyTextbox.Name = "encryptingKeyTextbox";
             this.encryptingKeyTextbox.Size = new System.Drawing.Size(190, 20);
-            this.encryptingKeyTextbox.TabIndex = 12;
+            this.encryptingKeyTextbox.TabIndex = 3;
             this.encryptingKeyTextbox.TextChanged += new System.EventHandler(this.encryptingKeyTextbox_TextChanged);
             // 
             // encryptingKeyLabel
@@ -130,7 +130,7 @@ namespace Encryption
             this.encryptingButton.Location = new System.Drawing.Point(6, 150);
             this.encryptingButton.Name = "encryptingButton";
             this.encryptingButton.Size = new System.Drawing.Size(299, 23);
-            this.encryptingButton.TabIndex = 10;
+            this.encryptingButton.TabIndex = 6;
             this.encryptingButton.Text = "Зашифровать";
             this.encryptingButton.UseVisualStyleBackColor = true;
             this.encryptingButton.Click += new System.EventHandler(this.encryptingButton_Click);
@@ -150,7 +150,7 @@ namespace Encryption
             this.encryptingResultTextbox.MaxLength = 8192;
             this.encryptingResultTextbox.Name = "encryptingResultTextbox";
             this.encryptingResultTextbox.Size = new System.Drawing.Size(231, 20);
-            this.encryptingResultTextbox.TabIndex = 8;
+            this.encryptingResultTextbox.TabIndex = 7;
             // 
             // encryptingSettingsRoundsLabel
             // 
@@ -176,7 +176,7 @@ namespace Encryption
             0});
             this.encryptingSettingsRoundsNum.Name = "encryptingSettingsRoundsNum";
             this.encryptingSettingsRoundsNum.Size = new System.Drawing.Size(48, 20);
-            this.encryptingSettingsRoundsNum.TabIndex = 6;
+            this.encryptingSettingsRoundsNum.TabIndex = 5;
             this.encryptingSettingsRoundsNum.Value = new decimal(new int[] {
             1,
             0,
@@ -198,9 +198,9 @@ namespace Encryption
             this.encryptingSettingsLabel.AutoSize = true;
             this.encryptingSettingsLabel.Location = new System.Drawing.Point(6, 82);
             this.encryptingSettingsLabel.Name = "encryptingSettingsLabel";
-            this.encryptingSettingsLabel.Size = new System.Drawing.Size(148, 13);
+            this.encryptingSettingsLabel.Size = new System.Drawing.Size(136, 13);
             this.encryptingSettingsLabel.TabIndex = 4;
-            this.encryptingSettingsLabel.Text = "Параметры зашифрования:";
+            this.encryptingSettingsLabel.Text = "Параметры шифрования:";
             // 
             // encryptingSettingsBlocksNum
             // 
@@ -217,7 +217,7 @@ namespace Encryption
             0});
             this.encryptingSettingsBlocksNum.Name = "encryptingSettingsBlocksNum";
             this.encryptingSettingsBlocksNum.Size = new System.Drawing.Size(48, 20);
-            this.encryptingSettingsBlocksNum.TabIndex = 3;
+            this.encryptingSettingsBlocksNum.TabIndex = 4;
             this.encryptingSettingsBlocksNum.Value = new decimal(new int[] {
             2,
             0,
@@ -241,7 +241,7 @@ namespace Encryption
             this.encryptingTextTextbox.MaxLength = 8192;
             this.encryptingTextTextbox.Name = "encryptingTextTextbox";
             this.encryptingTextTextbox.Size = new System.Drawing.Size(210, 20);
-            this.encryptingTextTextbox.TabIndex = 13;
+            this.encryptingTextTextbox.TabIndex = 1;
             this.encryptingTextTextbox.TextChanged += new System.EventHandler(this.encryptingTextTexbox_TextChanged);
             // 
             // encryptingTypeCombobox
@@ -249,11 +249,12 @@ namespace Encryption
             this.encryptingTypeCombobox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.encryptingTypeCombobox.FormattingEnabled = true;
             this.encryptingTypeCombobox.Items.AddRange(new object[] {
+            "XOR",
             "Сеть Фейстеля"});
             this.encryptingTypeCombobox.Location = new System.Drawing.Point(6, 32);
             this.encryptingTypeCombobox.Name = "encryptingTypeCombobox";
             this.encryptingTypeCombobox.Size = new System.Drawing.Size(299, 21);
-            this.encryptingTypeCombobox.TabIndex = 0;
+            this.encryptingTypeCombobox.TabIndex = 2;
             this.encryptingTypeCombobox.Text = "Выберите способ шифрования";
             this.encryptingTypeCombobox.UseWaitCursor = true;
             this.encryptingTypeCombobox.SelectedIndexChanged += new System.EventHandler(this.encryptingTypeCombobox_SelectedIndexChanged);
@@ -287,7 +288,7 @@ namespace Encryption
             this.decryptingKeyTextbox.MaxLength = 2048;
             this.decryptingKeyTextbox.Name = "decryptingKeyTextbox";
             this.decryptingKeyTextbox.Size = new System.Drawing.Size(190, 20);
-            this.decryptingKeyTextbox.TabIndex = 25;
+            this.decryptingKeyTextbox.TabIndex = 3;
             this.decryptingKeyTextbox.TextChanged += new System.EventHandler(this.decryptingSettingsKeyTextbox_TextChanged);
             // 
             // decryptingResultTextbox
@@ -296,7 +297,7 @@ namespace Encryption
             this.decryptingResultTextbox.MaxLength = 8192;
             this.decryptingResultTextbox.Name = "decryptingResultTextbox";
             this.decryptingResultTextbox.Size = new System.Drawing.Size(231, 20);
-            this.decryptingResultTextbox.TabIndex = 21;
+            this.decryptingResultTextbox.TabIndex = 7;
             // 
             // decryptingKeyLabel
             // 
@@ -313,11 +314,12 @@ namespace Encryption
             this.decryptingTypeCombobox.Cursor = System.Windows.Forms.Cursors.Default;
             this.decryptingTypeCombobox.FormattingEnabled = true;
             this.decryptingTypeCombobox.Items.AddRange(new object[] {
+            "XOR",
             "Сеть Фейстеля"});
             this.decryptingTypeCombobox.Location = new System.Drawing.Point(6, 32);
             this.decryptingTypeCombobox.Name = "decryptingTypeCombobox";
             this.decryptingTypeCombobox.Size = new System.Drawing.Size(299, 21);
-            this.decryptingTypeCombobox.TabIndex = 13;
+            this.decryptingTypeCombobox.TabIndex = 2;
             this.decryptingTypeCombobox.Text = "Выберите способ шифрования";
             this.decryptingTypeCombobox.SelectedIndexChanged += new System.EventHandler(this.decryptingTypeCombobox_SelectedIndexChanged);
             // 
@@ -327,7 +329,7 @@ namespace Encryption
             this.decryptingButton.Location = new System.Drawing.Point(6, 150);
             this.decryptingButton.Name = "decryptingButton";
             this.decryptingButton.Size = new System.Drawing.Size(299, 23);
-            this.decryptingButton.TabIndex = 23;
+            this.decryptingButton.TabIndex = 6;
             this.decryptingButton.Text = "Расшифровать";
             this.decryptingButton.UseVisualStyleBackColor = true;
             this.decryptingButton.Click += new System.EventHandler(this.decryptingButton_Click);
@@ -338,7 +340,7 @@ namespace Encryption
             this.decryptingTextTextbox.MaxLength = 8192;
             this.decryptingTextTextbox.Name = "decryptingTextTextbox";
             this.decryptingTextTextbox.Size = new System.Drawing.Size(210, 20);
-            this.decryptingTextTextbox.TabIndex = 14;
+            this.decryptingTextTextbox.TabIndex = 1;
             this.decryptingTextTextbox.TextChanged += new System.EventHandler(this.decryptingTextTextbox_TextChanged);
             // 
             // decryptingResultLabel
@@ -376,7 +378,7 @@ namespace Encryption
             0});
             this.decryptingSettingsBlocksNum.Name = "decryptingSettingsBlocksNum";
             this.decryptingSettingsBlocksNum.Size = new System.Drawing.Size(48, 20);
-            this.decryptingSettingsBlocksNum.TabIndex = 16;
+            this.decryptingSettingsBlocksNum.TabIndex = 4;
             this.decryptingSettingsBlocksNum.Value = new decimal(new int[] {
             2,
             0,
@@ -419,7 +421,7 @@ namespace Encryption
             0});
             this.decryptingSettingsRoundsNum.Name = "decryptingSettingsRoundsNum";
             this.decryptingSettingsRoundsNum.Size = new System.Drawing.Size(48, 20);
-            this.decryptingSettingsRoundsNum.TabIndex = 19;
+            this.decryptingSettingsRoundsNum.TabIndex = 5;
             this.decryptingSettingsRoundsNum.Value = new decimal(new int[] {
             1,
             0,
@@ -459,6 +461,7 @@ namespace Encryption
             // 
             this.statusProgressbar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.statusProgressbar.Location = new System.Drawing.Point(12, 282);
+            this.statusProgressbar.MarqueeAnimationSpeed = 1000;
             this.statusProgressbar.Maximum = 1;
             this.statusProgressbar.Name = "statusProgressbar";
             this.statusProgressbar.Size = new System.Drawing.Size(319, 23);
@@ -491,7 +494,7 @@ namespace Encryption
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "mainWindow";
-            this.Text = "Encryption - v0.3";
+            this.Text = "Encryption - v0.4";
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
